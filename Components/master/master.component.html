@@ -1,0 +1,60 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7">
+            <h2>List of Books</h2>
+            <div>
+
+                <input [(ngModel)]="searchValue" placeholder="Search here" type="search" class="form-control"/>
+
+            </div>
+            <table class="table table-bordered">
+                <tr>
+                    <th>Book ID</th>
+                    <th>Book Name</th>
+                    <th>Book Author</th>
+                    <th>Option</th>
+                </tr>
+                <tr *ngFor="let bk of bookList | search: searchValue">
+                    <td>{{bk.bookId}}</td>
+                    <td>{{bk.bookName}}</td>
+                    <td>{{bk.bookAuthor}}</td>
+                    <td>
+                        <button (click)="onDetailClick(bk)" class="btn btn-info"><i class="fa fa-eye fa-round"></i>Details</button>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+        <!-- <div *ngIf="selectedBook.bookName !=null" class="col-md-5">
+            <h3>Details of the selected books</h3>
+            <hr>
+            <div class="row">
+                <div class="col-md-8">
+                    <img style="width:100px" [src] = "selectedBook.bookImage">
+                </div>
+            <div class="col-md-6">
+                
+                
+                    <h2>{{selectedBook.bookName}}</h2>
+                    <hr>
+                    <p>{{selectedBook.bookAuthor}}</p>
+                    <p>{{selectedBook.bookPrice | currency: 'INR' }}</p>
+
+                
+                </div>
+            </div>
+        </div> -->
+        <div class="col-md-5">
+
+            <app-details [bookDetails] = selectedBook></app-details>
+    
+        </div>
+       
+    </div>
+    <div>
+        <h2>Register New Book</h2>
+      
+        <app-add (emitter)="onAddClick($event)"></app-add>
+    </div> 
+</div>

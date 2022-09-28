@@ -1,0 +1,42 @@
+<div class="container">
+
+    <div class="row">
+
+       <div class="col-md-10">
+
+            <p>
+                Enter the Id:
+                <input [(ngModel)]="Book.bookId" placeholder="Enter the Book Id" class="form-contrtol"/>
+            </p>
+            <p>
+                Enter the Book Name:
+                <input [(ngModel)]="Book.bookName" placeholder="Enter the Book name" class="form-contrtol"/>
+            </p>
+            <p>
+                Enter the Book Author:
+                <input [(ngModel)]="Book.bookAuthor" placeholder="Enter the Book Author" class="form-contrtol"/>
+            </p>
+            <p>
+                Enter the Book Price:
+                <input [(ngModel)]="Book.bookPrice" placeholder="Enter the Book price" class="form-contrtol"/>
+            </p>
+           <p>
+                Select the image:
+
+                <input type="file" [(ngModel)]="Book.bookImage" placeholder="Select the image" class="form-control"/>
+
+            </p>
+
+           <p>
+
+                <button class="btn btn-danger" (click)="onAddClick()"><i class="fa-fa-plus-circle"></i>Add to Database</button>
+
+            </p>
+
+         
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+        <div class="row">
+                <h2>
+                        Details of Books
+                    </h2>
+               
+        <hr>
+                <p>
+                          Select a file<input type = "file"   class ="form-control" [(ngModel)] = "foundbk.bookImage">
+            
+                    </p>
+          
+
+                <p><input type="text"  disabled class="form-control" [(ngModel)]="foundbk.bookId"></p>
+                <p><input type="text"  class="form-control" [(ngModel)]="foundbk.bookName"></p>
+                <p><input type="text"  class="form-control" [(ngModel)]="foundbk.bookAuthor"></p>
+                <p><input type="number"  class="form-control" [(ngModel)]="foundbk.bookPrice"></p>
+                <p>
+                      <button class="btn btn-primary" (click)="onsubmit()">
+                                <i class="fa fa-arrow-left"></i>
+                                Save Changes
+                            </button>
+                        <button class="btn btn-primary" routerLink="/Book/All">
+                                <i class="fa fa-arrow-left"></i>
+                                Back
+                            </button>
+                    </p>
+           
+    </div>
+</div>

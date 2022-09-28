@@ -1,0 +1,23 @@
+
+<div class ="container">
+    <div class ="row">
+        <h2>
+            Details of the Employee
+        </h2>
+        <hr>
+<p><img class="card-img" [src] = "selected.bookImage"></p>
+        <p><input type = "text" disabled class ="form-control" [(ngModel)] = "selected.bookId"></p>
+        <p><input type = "text" disabled class ="form-control" [(ngModel)] = "selected.bookName"></p>
+        <p><input type = "text" disabled class ="form-control" [(ngModel)] = "selected.bookAuthor"></p>
+        <p><input type = "text" disabled class ="form-control" [(ngModel)] = "selected.bookPrice"></p>
+
+        <p>
+                <button class ="btn btn-primary" routerLink = "/Book/All">
+
+        <i class = "fa fa-arrow-left"></i>
+        Back
+    </button>
+        </p>
+    </div>
+</div>
+

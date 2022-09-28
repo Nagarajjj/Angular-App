@@ -1,0 +1,15 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 ">
+            <img [src]="bookDetails.bookImage" class="card-img" alt="">
+        </div>
+        <div class="col-md-6">
+            <h2>{{bookDetails.bookName}}</h2>
+            <hr>
+            <p>{{bookDetails.bookAuthor}}</p>
+            <p>{{bookDetails.bookPrice | currency : 'INR'}}</p>
+        </div>
+    </div>
+</div>
+
